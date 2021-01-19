@@ -1,4 +1,4 @@
-#Windows Single Line Commands
+# Windows Single Line Commands
 - Use this to Add a Azure AD user directly to a local system group
    - Net localgroup Administrators /add "AzureAD\FULL EMAIL ADDRESS"
 - Add User account to Windows with group and password

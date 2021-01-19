@@ -7,3 +7,5 @@
    - wmic useraccount get name,sid
 - Change System Name 
    - WMIC ComputerSystem where Name="%computername%" call Rename Name="NEW NAME"
+- Get Windows Build ##
+   - REG QUERY "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion" | findstr ReleaseId

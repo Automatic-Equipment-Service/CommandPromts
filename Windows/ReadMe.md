@@ -1,5 +1,5 @@
 # Windows Single Line Commands
-- Use this to Add a Azure AD user directly to a local system group
+- Use this to Add a Azure AD user directly to a local system group, Specifically for Azure Joined Devices
    - Net localgroup Administrators /add "AzureAD\FULL EMAIL ADDRESS"
 - Add User account to Windows with group and password
    - net user USERNAME PASSWORD /add && net localgroup administrators USERNAME /add && net user

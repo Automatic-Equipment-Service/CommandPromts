@@ -9,4 +9,4 @@
    - WMIC ComputerSystem where Name="%computername%" call Rename Name="NEW NAME"
 - Get Windows Build ##
    - REG QUERY "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion" | findstr ReleaseId
-- Run the "clearprintqueue.bat" in order to clear the print queue on a windows machine. Specifically usefull when a print stops responding and just starts filling the queue with dud files
+- Run the "clearprintqueue.bat" in order to clear the print queue on a windows machine. Specifically usefull when a print stops responding and just starts filling the queue with dud files. The file does need to be run as admin seeing as it needs to disable services.

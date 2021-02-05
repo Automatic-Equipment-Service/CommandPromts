@@ -10,3 +10,11 @@
 - Get Windows Build ##
    - REG QUERY "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion" | findstr ReleaseId
 - Run the "clearprintqueue.bat" in order to clear the print queue on a windows machine. Specifically usefull when a print stops responding and just starts filling the queue with dud files. The file does need to be run as admin seeing as it needs to disable services.
+- System File Checker. Usefull to see if windows has any broken files in the OS level
+   - SFC /scannow
+      - /verifyonly : Check the integrity but don’t repair the files.
+      - /scanfile : Scan the integrity of specific files and fix if corrupted.
+      - /verifyfile : Verify the integrity of specific files but don’t repair them
+      - /offbootdir : Use this to do repairs on an offline boot directory.
+      - /offwindir : Use this to do repairs on an offline Windows directory.
+      - /offlogfile : Specify a path to save a log file with scan results.

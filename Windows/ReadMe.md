@@ -11,7 +11,7 @@ There will be some extra .bat files in this directory simply to make some things
    - WMIC useraccount get name,sid
 - Change System Name 
    - WMIC ComputerSystem where Name="%computername%" call Rename Name="NEW NAME"
-- Get Windows Version ##
+- Get Windows Version ##  
       - This is to pull the Windows 10 Feature Update Name that the Current System is
    - REG QUERY "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion" | findstr ReleaseId
       - To pull the "Build Version" use

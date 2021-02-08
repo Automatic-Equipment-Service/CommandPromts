@@ -1,4 +1,8 @@
-# Windows Single Line Commands
+# **Windows Single Line Commands**
+There will be some extra .bat files in this directory simply to make some things easier
+<br/>
+
+## **Batch/CMD Commands**
 - Use this to Add a Azure AD user directly to a local system group, Specifically for Azure Joined Devices
    - Net localgroup Administrators /add "AzureAD\FULL EMAIL ADDRESS"
 - Add User account to Windows with group and password
@@ -7,8 +11,11 @@
    - WMIC useraccount get name,sid
 - Change System Name 
    - WMIC ComputerSystem where Name="%computername%" call Rename Name="NEW NAME"
-- Get Windows Build ##
+- Get Windows Version ##
+      - This is to pull the Windows 10 Feature Update Name that the Current System is
    - REG QUERY "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion" | findstr ReleaseId
+      - To pull the "Build Version" use
+   - REG QUERY "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion" | findstr CurrentBuildNumber
 - Run the "clearprintqueue.bat" in order to clear the print queue on a windows machine. Specifically usefull when a print stops responding and just starts filling the queue with dud files. The file does need to be run as admin seeing as it needs to disable services.
 - System File Checker. Usefull to see if windows has any broken files in the OS level
    - SFC
@@ -25,3 +32,11 @@
       - /x : Forces the volume to dismount first, if necessary. All open handles to the drive are invalidated. /x also includes the functionality of /f.
       - /r : Locates bad sectors and recovers readable information. The disk must be locked. /r includes the functionality of /f, with the additional analysis of physical disk errors.
          - Combining f x r is usually the best combo to run when you need to run Check Disk against C:\
+- Exporting Drivers from Windows Installation. There are two commands. The first will make a list of all drivers and the second will actually copy the drivers from windows to a chosen folder. Might be easier to find which one you need using the list first
+      - Installing the exported driver should be as simple as right click/install on the inf file inside the export
+   - dism.exe /Online /Get-Drivers > [DIRECTORY TO MAKE LIST IN]\driverlist.txt
+   - dism /online /export-driver /destination:[LOCATION TO STORE FILES IN]
+<br/>
+<br/>
+
+## **Powershell Commands**

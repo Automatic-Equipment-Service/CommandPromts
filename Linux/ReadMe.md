@@ -1,0 +1,26 @@
+# **Linux Single Line Commands**
+Most of these commands are ones that we have been using in Ubuntu and some other debian flavors. If one of the commands is specific to another flavor it will be noted with the command
+<br/>
+
+## **Ubuntu/Debian**
+- Changing a password
+    - passwd
+        - to change your password
+    - sudo passwd [USERNAME]
+        - to change other users password. this should work with root too, but you may need to switch to root with "su" before running "passwd" on its own there
+- IP information
+    - ip [arg]
+        - address : same as ipconfig on windows
+- Disableing or enableing firewall entirely
+    - sudo ufw [disable/enable]
+- Changing System Hostname, this will be multiple steps
+    - Use the following to list current Hostname if needed. Depending on the environment one of these might not work
+        - hostnamectl
+        - echo "$HOSTNAME"
+    - sudo hostnamectl set-hostname newNameHere
+    - sudo nano /etc/hosts
+        - or your choice of text editor
+        - Replace any reference to your original hostname with the New hostname you entered earlier
+    - sudo reboot
+        - some variants of ubuntu may not require a reboot or the hosts file edits but just check to make sure
+- 

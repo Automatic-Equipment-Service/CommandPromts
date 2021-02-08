@@ -2,6 +2,10 @@
 There will be some extra .bat files in this directory simply to make some things easier
 <br/>
 
+### **Nice to Knows**
+- Running any command with a >filename.txt will log all output of the command to a file for a review
+- Running any command with a >>filename.txt will add output of run command to a file for review, this is usfull to continue to add info to the same log file as a previous run
+
 ## **Batch/CMD Commands**
 - Use this to Add a Azure AD user directly to a local system group, Specifically for Azure Joined Devices
    - Net localgroup Administrators /add "AzureAD\FULL EMAIL ADDRESS"
@@ -36,7 +40,9 @@ There will be some extra .bat files in this directory simply to make some things
       - Installing the exported driver should be as simple as right click/install on the inf file inside the export
    - dism.exe /Online /Get-Drivers > [DIRECTORY TO MAKE LIST IN]\driverlist.txt
    - dism /online /export-driver /destination:[LOCATION TO STORE FILES IN]
-<br/>
+- Clearing Print Spooler Queue
+   - there is a [bat file for this in this repo](https://github.com/Automatic-Equipment-Service/CommandPromts/blob/main/Windows/clearprintqueue.bat) that needs to be run as administrator but here is the single line version that also needs to be run as admin
+      - net stop spooler && del %systemroot%\System32\spool\printers\* /Q /F /S && net start spooler
 <br/>
 
 ## **Powershell Commands**

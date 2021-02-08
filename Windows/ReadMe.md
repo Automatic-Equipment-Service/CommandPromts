@@ -1,5 +1,5 @@
 # **Windows Single Line Commands**
-There will be some extra .bat files in this directory simply to make some things easier
+This is a list of Useful commands to run in windows. There is no single use for these it is mostly just a collection for easier reference. There will be some extra .bat files in this directory simply to make some things easier.
 <br/>
 
 ### **Nice to Knows**
@@ -7,10 +7,10 @@ There will be some extra .bat files in this directory simply to make some things
 - Running any command with a >>filename.txt will add output of run command to a file for review, this is usfull to continue to add info to the same log file as a previous run
 
 ## **Batch/CMD Commands**
-- Use this to Add a Azure AD user directly to a local system group, Specifically for Azure Joined Devices
+- Use this to Add a Azure AD user directly to a local system group, Specifically for Azure Joined Devices.
    - Net localgroup Administrators /add "AzureAD\FULL EMAIL ADDRESS"
-- Add User account to Windows with group and password
-   - net user USERNAME PASSWORD /add && net localgroup administrators USERNAME /add && net user
+- Add User account to Windows with group and password and add them to Administrators group
+   - net user [USERNAME] [PASSWORD] /add && net localgroup administrators [USERNAME] /add && net user
 - List User UUIDs
    - WMIC useraccount get name,sid
 - Change System Name 
@@ -21,7 +21,7 @@ There will be some extra .bat files in this directory simply to make some things
    - To pull the "Build Version" use
       - REG QUERY "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion" | findstr CurrentBuildNumber
 - Run the "clearprintqueue.bat" in order to clear the print queue on a windows machine. Specifically usefull when a print stops responding and just starts filling the queue with dud files. The file does need to be run as admin seeing as it needs to disable services.
-- System File Checker. Usefull to see if windows has any broken files in the OS level
+- System File Checker. Usefull to see if windows has any broken files in the OS level. [Microsoft Documentation](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/sfc)
    - SFC
       - /scannow : will check the integrity of all protected system files. If a problem is found, the files will be repaired with backed-up system files.
       - /verifyonly : Check the integrity but don’t repair the files.
@@ -30,7 +30,7 @@ There will be some extra .bat files in this directory simply to make some things
       - /offbootdir : Use this to do repairs on an offline boot directory.
       - /offwindir : Use this to do repairs on an offline Windows directory.
       - /offlogfile : Specify a path to save a log file with scan results.
-- Check Disk is an obvious one
+- Check Disk is an obvious one. [Microsoft Documentation](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/chkdsk)
    - chkdsk [volume letter] [args]
       - /f : Fixes errors on the disk. The disk must be locked. If chkdsk cannot lock the drive, a message appears that asks you if you want to check the drive the next time you restart the computer.
       - /x : Forces the volume to dismount first, if necessary. All open handles to the drive are invalidated. /x also includes the functionality of /f.

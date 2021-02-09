@@ -5,6 +5,7 @@ This is a list of Useful commands to run in windows. There is no single use for 
 ### **Nice to Knows**
 - Running any command with a >filename.txt will log all output of the command to a file for a review
 - Running any command with a >>filename.txt will add output of run command to a file for review, this is usfull to continue to add info to the same log file as a previous run
+- The only way to run commands as admin in windows is via a "Run As Administrator" version of Command Prompt
 
 ## **Batch/CMD Commands**
 - Use this to Add a Azure AD user directly to a local system group, Specifically for Azure Joined Devices.
@@ -43,6 +44,13 @@ This is a list of Useful commands to run in windows. There is no single use for 
 - Clearing Print Spooler Queue
    - there is a [bat file for this in this repo](https://github.com/Automatic-Equipment-Service/CommandPromts/blob/main/Windows/clearprintqueue.bat) that needs to be run as administrator but here is the single line version that also needs to be run as admin
       - net stop spooler && del %systemroot%\System32\spool\printers\* /Q /F /S && net start spooler
+- Built in SSH Utilities based on OpenSSH at time of entry. [Microsoft Documentation](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse)
+   - ssh [USER]@[IPADDRESS OR HOSTNAME]
+   - If you need to remove a key because of a host change or any other reason, then run the following command
+      - ssh-keygen -R "IPADDRESS OR HOSTNAME"
+- Toggle all windows Firewall profiles on or off
+   - NetSh Advfirewall set allprofiles state [On | Off]
+   - Netsh Advfirewall show allprofiles
 <br/>
 
 ## **Powershell Commands**

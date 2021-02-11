@@ -51,6 +51,9 @@ This is a list of Useful commands to run in windows. There is no single use for 
 - Toggle all windows Firewall profiles on or off
    - NetSh Advfirewall set allprofiles state [On | Off]
    - Netsh Advfirewall show allprofiles
+- Take Owership of a Folder of File
+   - takeown /F <filename>
+   - takeown /f <foldername> /r /d y
 <br/>
 
 ## **Powershell Commands**

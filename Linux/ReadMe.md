@@ -23,4 +23,10 @@ Most of these commands are ones that we have been using in Ubuntu and some other
         - Replace any reference to your original hostname with the New hostname you entered earlier
     - sudo reboot
         - some variants of ubuntu may not require a reboot or the hosts file edits but just check to make sure
+- Removing the Need to enter a password for sudo in Ubuntu 16.04 and seems to work in 20.04
+    - sudo visudo
+    - and change "sudo" group to look like this
+        - %sudo   ALL=(ALL) NOPASSWD: ALL
+- List Current User
+    - whoami
 - 

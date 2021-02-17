@@ -35,3 +35,7 @@ Most of these commands are ones that we have been using in Ubuntu and some other
         - this is recursive to cover files folders inside of the directory
         - you can add an "x" to the rw to allow for execution of the relevant file or folder
         - "a" is for all users and groups
+
+## External Links
+- [Linux Command Library](https://linuxcommandlibrary.com/)
+    - [Oneliners](https://linuxcommandlibrary.com/basic/oneliners.html)

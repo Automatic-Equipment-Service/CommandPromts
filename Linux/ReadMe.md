@@ -29,4 +29,9 @@ Most of these commands are ones that we have been using in Ubuntu and some other
         - %sudo   ALL=(ALL) NOPASSWD: ALL
 - List Current User
     - whoami
-- 
+- add read write perminions to file or folder
+    - chmod a+rw [file/foldername]
+    - chmod -R a+rw [file/foldername]
+        - this is recursive to cover files folders inside of the directory
+        - you can add an "x" to the rw to allow for execution of the relevant file or folder
+        - "a" is for all users and groups

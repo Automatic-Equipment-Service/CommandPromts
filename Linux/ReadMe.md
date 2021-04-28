@@ -4,34 +4,34 @@ Most of these commands are ones that we have been using in Ubuntu and some other
 
 ## **Ubuntu/Debian**
 - Changing a password
-    - passwd
+    - `passwd`
         - to change your password
-    - sudo passwd [USERNAME]
+    - `sudo passwd [USERNAME]`
         - to change other users password. this should work with root too, but you may need to switch to root with "su" before running "passwd" on its own there
 - IP information
-    - ip [arg]
-        - address : same as ipconfig on windows
+    - `ip [arg]`
+        - `address` : same as ipconfig on windows
 - Disableing or enableing firewall entirely
-    - sudo ufw [disable/enable]
+    - `sudo ufw` [disable/enable]
 - Changing System Hostname, this will be multiple steps
     - Use the following to list current Hostname if needed. Depending on the environment one of these might not work
-        - hostnamectl
-        - echo "$HOSTNAME"
-    - sudo hostnamectl set-hostname newNameHere
-    - sudo nano /etc/hosts
+        - `hostnamectl`
+        - `echo "$HOSTNAME"`
+    - `sudo hostnamectl set-hostname newNameHere`
+    - `sudo nano /etc/hosts`
         - or your choice of text editor
         - Replace any reference to your original hostname with the New hostname you entered earlier
-    - sudo reboot
+    - `sudo reboot`
         - some variants of ubuntu may not require a reboot or the hosts file edits but just check to make sure
 - Removing the Need to enter a password for sudo in Ubuntu 16.04 and seems to work in 20.04
-    - sudo visudo
+    - `sudo visudo`
     - and change "sudo" group to look like this
-        - %sudo   ALL=(ALL) NOPASSWD: ALL
+        - `%sudo   ALL=(ALL) NOPASSWD: ALL`
 - List Current User
-    - whoami
+    - `whoami`
 - add read write perminions to file or folder
-    - chmod a+rw [file/foldername]
-    - chmod -R a+rw [file/foldername]
+    - `chmod a+rw` [file/foldername]
+    - `chmod -R a+rw` [file/foldername]
         - this is recursive to cover files folders inside of the directory
         - you can add an "x" to the rw to allow for execution of the relevant file or folder
         - "a" is for all users and groups

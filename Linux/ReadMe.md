@@ -36,11 +36,10 @@ Most of these commands are ones that we have been using in Ubuntu and some other
         - you can add an "x" to the rw to allow for execution of the relevant file or folder
         - "a" is for all users and groups
 - Setting the Time in Debian
-    - date --set 1998-11-02 
-    - date --set 21:08:00
-    - hwclock --systohc
+    - `date --set 1998-11-02`
+    - `date --set 21:08:00`
+    - `hwclock --systohc`
         - This will sync the system clock to the hardware clock to make the time persist over reboots. Shouldn't be needed in debian if the system is shutdown properly because it autosaves the time when it restarts.
-
 ## External Links
 - [Linux Command Library](https://linuxcommandlibrary.com/)
     - [Oneliners](https://linuxcommandlibrary.com/basic/oneliners.html)

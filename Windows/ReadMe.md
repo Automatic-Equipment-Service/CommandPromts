@@ -7,6 +7,14 @@ This is a list of Useful commands to run in windows. There is no single use for 
 - Running any command with a >>filename.txt will add output of run command to a file for review, this is usfull to continue to add info to the same log file as a previous run
 - The only way to run commands as admin in windows is via a "Run As Administrator" version of Command Prompt
 
+## **Useful Folder Locations**
+- Windows 7 / 10 Per Users Startup Folder
+   - `%appdata%\Microsoft\Windows\Start Menu\Programs\Startup`
+      - via run you can use `Shell:startup`
+- Windows 7 / 10 All Users Startup Folder
+   - `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp`
+      - via run you can use `Shell:common startup`
+
 ## **Batch/CMD Commands**
 - Use this to Add a Azure AD user directly to a local system group, Specifically for Azure Joined Devices.
    - `Net localgroup Administrators /add "AzureAD\FULL EMAIL ADDRESS"`

@@ -65,3 +65,6 @@ This is a list of Useful commands to run in windows. There is no single use for 
 <br/>
 
 ## **Powershell Commands**
+- Enable WSL (windows sub-system linux) | (run as administrator)
+   - `dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart`
+      - This installs WSL 1 which does not support gui based linux. [Follow this link for details on finishing the update to WSL 2 if needed](https://docs.microsoft.com/en-us/windows/wsl/install-win10)

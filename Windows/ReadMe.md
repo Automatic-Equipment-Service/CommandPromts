@@ -31,11 +31,17 @@ This is a list of Useful commands to run in windows. There is no single use for 
 - Add User account to Windows with group and password and add them to Administrators group
   - `net user [USERNAME] [PASSWORD] /add && net localgroup administrators [USERNAME] /add && net user`
 - Changing a Users password via the Net user command is as simple as dropping the `/add` from base above command string
+  - `net user [USERNAME] [NEW_PASSWORD]`
 - Toggling the Expiration of user passwords (Only for Local Accounts)
   - `wmic UserAccount set PasswordExpires=False`
     - this will toggle for all accounts
   - `wmic UserAccount where Name="user name" set PasswordExpires=False`
     - this will toggle for the specific account, username needs to be exact. Run net user to list the accounts first.
+- Diable a user account to prevent logging in
+  - `net user [USERNAME] /active:no`
+    - Change no to yes in order to re enable the account
+- Set the password of an existing user account to blank effectivly removing the password
+  - `net user [USERNAME] *`
 - List User UUIDs
   - `WMIC useraccount get name,sid`
 - Change System Name

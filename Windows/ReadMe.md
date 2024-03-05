@@ -127,6 +127,8 @@ This is a list of Useful commands to run in windows. There is no single use for 
     - The Lower the Metric Value the Higher the priority (like golf, lower better)
 
 ## **Powershell Modules**
+- While attempting to install a module if you recieve an error about being unable to download from URI and you can prove the machine has an active internet connect and can ping the URI it is complaining about then try and run the following before attempting to install the module again. You may need to restart your terminal session after running the command
+  - `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
 
 - Windows Update Module
   - You can install it using the following

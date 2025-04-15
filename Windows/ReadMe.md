@@ -125,6 +125,12 @@ This is a list of Useful commands to run in windows. There is no single use for 
     - This Should List Current adapters and their Index ID on the left
   - `Set-NetIPInterface -InterfaceIndex "IndexID for the wanted Adapter" -InterfaceMetric "New Metric Value"`
     - The Lower the Metric Value the Higher the priority (like golf, lower better)
+- Change PC Name.
+  - `Rename-Computer -NewName "NEW_PC_NAME" -Force -Restart`
+- Disable Password Expiration per Local User
+  - `Get-LocalUser -Name "USER_TO_CHANGE" | Set-LocalUser -PasswordNeverExpires $true`
+  - To Walk through all Local Users
+    - `Get-LocalUser | Where-Object { -not $_.PasswordNeverExpires } | ForEach-Object {$_ | Set-LocalUser -PasswordNeverExpires $true}`
 
 ## **Powershell Modules**
 - While attempting to install a module if you recieve an error about being unable to download from URI and you can prove the machine has an active internet connect and can ping the URI it is complaining about then try and run the following before attempting to install the module again. You may need to restart your terminal session after running the command
